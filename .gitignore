@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-ssr/
+coverage/
+lighthouse/
+*.log
+.preview.pid
+.DS_Store
+Thumbs.db
