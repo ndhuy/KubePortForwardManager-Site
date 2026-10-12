@@ -2,7 +2,7 @@ import { PageHeader, Toc } from '../components/ui';
 import { SITE } from '../site';
 
 /** Last time the policy text was changed. Update together with the text. */
-export const PRIVACY_LAST_UPDATED = '2026-10-12';
+export const PRIVACY_LAST_UPDATED = '2026-10-12';   // contact email added the same day
 
 const SECTIONS = [
   { id: 'summary', label: 'Summary' },
@@ -63,7 +63,7 @@ export default function Privacy() {
 
           <h2 id="publisher">3. Data collected by the publisher</h2>
           <p>The app contains no analytics or telemetry code, and it does not transmit your profiles, logs, kubeconfig paths, cluster information or any other data to the publisher. The publisher does not operate any server that the app contacts.</p>
-          <p>If you contact the publisher, for example by opening a GitHub issue, the publisher sees what you choose to share there. GitHub&apos;s privacy statement applies to GitHub.</p>
+          <p>If you contact the publisher by email or by opening a GitHub issue, the publisher receives what you choose to send, such as your email address and message, and uses it only to answer you. GitHub&apos;s privacy statement applies to GitHub.</p>
 
           <h2 id="microsoft">Microsoft Store and Windows</h2>
           <p>
@@ -96,9 +96,12 @@ export default function Privacy() {
 
           <h2 id="contact">Contact</h2>
           <p>
-            Publisher: {SITE.publisher}. For questions about this policy, open an issue at{' '}
-            <a href={SITE.issuesUrl}>{SITE.issuesUrl.replace('https://', '')}</a>. Issues are public, so do not include personal or
-            sensitive information.
+            Publisher: {SITE.publisher}. For questions or requests about this policy, email{' '}
+            <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+          </p>
+          <p>
+            You can also open a public issue at <a href={SITE.issuesUrl}>{SITE.issuesUrl.replace('https://', '')}</a>. Issues are public,
+            so do not include personal or sensitive information there.
           </p>
         </article>
       </div>

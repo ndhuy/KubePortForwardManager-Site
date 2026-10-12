@@ -15,6 +15,8 @@ export const SITE = {
   repoUrl: 'https://github.com/ndhuy/KubePortForwardManager-Site',
   issuesUrl: 'https://github.com/ndhuy/KubePortForwardManager-Site/issues',
   newIssueUrl: 'https://github.com/ndhuy/KubePortForwardManager-Site/issues/new',
+  /** Publisher contact for privacy questions and private support requests (provided by the publisher). */
+  contactEmail: 'huynd1709@gmail.com',
   disclaimer:
     'Kube Port Forward Manager is an independent application and is not affiliated with, endorsed by, or sponsored by Microsoft, the Linux Foundation, or the Cloud Native Computing Foundation.',
   trademarkNote:

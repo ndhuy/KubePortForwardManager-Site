@@ -121,6 +121,16 @@ describe('privacy policy', () => {
     expect(text).not.toMatch(/never makes (any )?network/i);
     expect(screen.getAllByRole('link').some((a) => a.getAttribute('href') === SITE.issuesUrl)).toBe(true);
   });
+
+  it('gives the publisher contact email (provided by the publisher)', () => {
+    expect(SITE.contactEmail).toBe('huynd1709@gmail.com');
+    for (const path of ['/privacy/', '/support/']) {
+      const { unmount } = renderAt(path);
+      const mailto = screen.getAllByRole('link').filter((a) => a.getAttribute('href') === `mailto:${SITE.contactEmail}`);
+      expect(mailto.length, path).toBeGreaterThanOrEqual(2);   // page body + footer
+      unmount();
+    }
+  });
 });
 
 describe('support and FAQ', () => {

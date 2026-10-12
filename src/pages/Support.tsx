@@ -13,6 +13,7 @@ const SECTIONS = [
   { id: 'other-errors', label: 'Other connection errors' },
   { id: 'backup', label: 'Profile backup and restore' },
   { id: 'report', label: 'Report a bug or request a feature' },
+  { id: 'contact', label: 'Contact by email' },
 ];
 
 export default function Support() {
@@ -86,6 +87,9 @@ export default function Support() {
           <Callout tone="warning" title="Never post sensitive information">
             Issues are public. Do <strong>not</strong> post kubeconfig contents, access tokens, passwords, certificates, private cluster endpoints or unreviewed application logs. Replace real cluster, namespace and service names if they are confidential. The app redacts known secret formats in its logs, but it cannot recognise everything, so review copied text before sharing it.
           </Callout>
+
+          <h2 id="contact">Contact by email</h2>
+          <p>For questions you prefer not to post publicly, such as privacy requests, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Even by email, never send kubeconfig contents, tokens or passwords.</p>
         </article>
       </div>
     </>

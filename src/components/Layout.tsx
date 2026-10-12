@@ -106,6 +106,7 @@ function Footer() {
             <li><Link className="text-mist-400 no-underline hover:text-teal-300" to="/support/">Support</Link></li>
             <li><Link className="text-mist-400 no-underline hover:text-teal-300" to="/faq/">FAQ</Link></li>
             <li><Link className="text-mist-400 no-underline hover:text-teal-300" to="/privacy/">Privacy Policy</Link></li>
+            <li><a className="text-mist-400 no-underline hover:text-teal-300" href={`mailto:${SITE.contactEmail}`}>Contact: {SITE.contactEmail}</a></li>
           </ul>
         </nav>
       </div>
